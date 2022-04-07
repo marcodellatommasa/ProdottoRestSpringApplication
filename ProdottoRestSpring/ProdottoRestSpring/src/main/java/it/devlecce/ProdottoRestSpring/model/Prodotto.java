@@ -1,9 +1,10 @@
 package it.devlecce.ProdottoRestSpring.model;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
-
+@Entity
 public class Prodotto {
 
 
@@ -12,17 +13,17 @@ public class Prodotto {
         private Long id;
         private String nome;
         private float prezzo;
-        public Date datadinascita;
+        public Date datadiacquisto;
 
     public Prodotto(String nome, float prezzo) {
         this.nome = nome;
         this.prezzo = prezzo;
     }
 
-    public Prodotto(String nome, float prezzo, Date datadinascita) {
+    public Prodotto(String nome, float prezzo, Date datadiacquisto) {
         this.nome = nome;
         this.prezzo = prezzo;
-        this.datadinascita = datadinascita;
+        this.datadiacquisto = datadiacquisto;
     }
 
     public Prodotto() {
@@ -52,19 +53,19 @@ public class Prodotto {
         this.prezzo = prezzo;
     }
 
-    public Date getDatadinascita() {
-        return datadinascita;
+    public Date getDatadiacquisto() {
+        return datadiacquisto;
     }
 
-    public void setDatadinascita(Date datadinascita) {
-        this.datadinascita = datadinascita;
+    public void setDatadiacquisto(Date datadiacquisto) {
+        this.datadiacquisto = datadiacquisto;
     }
 
-    public Prodotto(Long id, String nome, float prezzo, Date datadinascita) {
+    public Prodotto(Long id, String nome, float prezzo, Date datadiacquisto) {
         this.id = id;
         this.nome = nome;
         this.prezzo = prezzo;
-        this.datadinascita = datadinascita;
+        this.datadiacquisto = datadiacquisto;
     }
 }
 
